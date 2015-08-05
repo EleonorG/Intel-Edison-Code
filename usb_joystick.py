@@ -1,4 +1,4 @@
-from evdev import InputDevice, categorize, list_devices
+from evdev import InputDevice, categorize, list_devices, ecodes
 
 def main():
 	x_scaled = 0.0
@@ -20,12 +20,12 @@ def selectDevice():
     '''Connect to the joystick or quit if one is not connected'''
     devices = [InputDevice(i) for i in reversed(list_devices('/dev/input/'))]
     if(len(devices) > 2):
-	    return devices[2]
-	else:
-		print("No joysticks found!)")
-		exit()
+        return devices[2]
+    else:
+        print("No joysticks found!)")
+        exit()
 
-def printPosition(x,y)
+def printPosition(x,y):
 	print("Position: {0}, {1}".format(x,y))
 
 main()
