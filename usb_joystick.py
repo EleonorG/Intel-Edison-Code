@@ -11,6 +11,7 @@ def main():
 			if(event.code == 0):
 				x_scaled = event.value-512.0
 				x_scaled = x_scaled/512
+				printPosition(x_scaled,y_scaled)
 			if(event.code ==1):
 				y_scaled = event.value-512.0
 				y_scaled = -y_scaled/512
