@@ -24,7 +24,7 @@ def main():
 
 def setDirection(x,y):
     pwmPins = [0,1,2]
-    angles = [90,225,315]
+    angles = [90,210,330]
     velocities = []
     scaledVelocities = []
 
