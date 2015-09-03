@@ -1,4 +1,4 @@
-o 214 > /sys/class/gpio/export 2>&1
+echo 214 > /sys/class/gpio/export 2>&1
 echo high > /sys/class/gpio/gpio214/direction
 echo low > /sys/class/gpio/gpio214/direction
  
