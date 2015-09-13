@@ -31,6 +31,10 @@ class PWMShield:
 	frequencyOffset = .325
 	pulseWidthScalingValue = 1.113
 
+
+	# Constructor for the object; argue in a 1 for the I2C bus if you're using a sparkfun block
+	# If you're using an arduino breakout board with an Adafruit PWM Shield, argue in a 6
+	
 	def __init__(self, i2cBus,debugging=False,i2cAddress=0x40):
 		self.i2c = mraa.I2c(i2cBus)
 		self.i2cAddress = i2cAddress
